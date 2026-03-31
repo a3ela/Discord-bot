@@ -78,9 +78,8 @@ client.on(Events.MessageCreate, async (message) => {
 
     try {
       // 4. Ask Grok for a response
-      console.log("identity: ", identity);
       const completion = await grok.chat.completions.create({
-        model: "llama-3.3-70b-versatile", // Fast Groq-hosted model
+        model: "llama-3.3-70b-versatile",
         messages: [
           {
             role: "system",
